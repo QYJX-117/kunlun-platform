@@ -49,7 +49,7 @@ import { useRouter, useRoute } from 'vue-router'
 const router = useRouter()
 const route = useRoute()
 
-const role = localStorage.getItem('role') || ''
+const role = (localStorage.getItem('role') || '').toLowerCase()
 
 const roleNameMap: Record<string, string> = {
   dispatcher: '调度员',
