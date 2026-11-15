@@ -1,0 +1,137 @@
+@import './base.css';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Element Plus 全局覆盖 - 蓝白主题 */
+:root {
+  --kunlun-primary: #005293;
+  --kunlun-primary-light: #0073c6;
+  --kunlun-sidebar-bg: #001529;
+  --kunlun-header-bg: #fff;
+  --kunlun-main-bg: #f0f5fa;
+}
+
+/* 表格斑马纹 */
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+  background: #f7faff;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped:hover td {
+  background: #ecf3fc;
+}
+
+/* 按钮圆角统一 4px */
+.el-button {
+  border-radius: 4px;
+}
+
+/* 卡片阴影 */
+.el-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8edf2;
+}
+
+/* 分页器 */
+.el-pagination {
+  justify-content: flex-end;
+}
+
+/* 表格 */
+.el-table th.el-table__cell {
+  background-color: #f0f5fa;
+  color: #303133;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.el-table td.el-table__cell {
+  font-size: 14px;
+}
+
+/* 输入框 */
+.el-input .el-input__wrapper {
+  border-radius: 4px;
+}
+
+/* Select */
+.el-select .el-select__wrapper {
+  border-radius: 4px;
+}
+
+/* Tags */
+.el-tag {
+  border-radius: 4px;
+}
+
+/* Dialog */
+.el-dialog {
+  border-radius: 8px;
+}
+
+/* Menu - 侧边栏深蓝背景 */
+.el-menu--vertical,
+.el-menu {
+  background-color: #001529 !important;
+}
+
+.el-menu-item {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 15px;
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.el-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+}
+
+.el-menu-item.is-active {
+  background-color: #005293 !important;
+  color: #fff !important;
+}
+
+/* 子菜单 */
+.el-sub-menu__title {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 15px;
+}
+
+.el-sub-menu__title:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+}
+
+/* 通用页面标题区 */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #303133;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
