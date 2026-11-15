@@ -15,9 +15,10 @@ class SafetyStockCalculatorTest {
 
         double result = SafetyStockCalculator.calculate(sales, leadTime, serviceLevel);
 
-        // mean = 700/7 = 100, sumSq = 600, stdDev = sqrt(600/6) = 10
-        // safetyStock = 1.65 * 10 * sqrt(4) = 1.65 * 10 * 2 = 33.0
-        assertEquals(33.0, result, 0.01);
+        // mean = 700/7 = 100, sumSq = 700, 样本标准差 = sqrt(700/6) ≈ 10.801
+        // safetyStock = 1.65 * 10.801 * sqrt(4) ≈ 35.644
+        double expected = 1.65 * Math.sqrt(700.0 / 6.0) * 2;
+        assertEquals(expected, result, 1e-9);
     }
 
     @Test

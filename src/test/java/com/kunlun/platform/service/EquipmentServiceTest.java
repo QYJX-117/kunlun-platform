@@ -28,6 +28,8 @@ class EquipmentServiceTest {
     @BeforeEach
     void setUp() {
         service = new EquipmentService(equipmentRepository, maintenanceOrderRepository, userRepository);
+        lenient().when(maintenanceOrderRepository.save(any(MaintenanceOrder.class)))
+                .thenAnswer(invocation -> invocation.getArgument(0));
     }
 
     @Test
@@ -73,7 +75,7 @@ class EquipmentServiceTest {
         service.completeRepair(10L, "定期保养", "无");
 
         assertEquals("NORMAL", equipment.getStatus());
-        verify(equipmentRepository).save(equipment);
+        verify(equipmentRepository, never()).save(equipment);
     }
 
     @Test

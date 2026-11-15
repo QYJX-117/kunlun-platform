@@ -160,7 +160,7 @@ npm run dev
 ./mvnw test
 ```
 
-测试覆盖 JWT 生成/解析、Haversine 距离与路线优化、安全库存、一次指数平滑，以及调度、执行、设备三个服务的核心流程。
+测试覆盖 JWT 生成/解析、Haversine 距离与路线优化、安全库存、一次指数平滑，以及调度、执行、设备三个服务的核心流程。`PlatformApplicationTests` 需要连接 MySQL，默认跳过；本地数据库就绪后可设置 `RUN_DB_TESTS=true` 再运行。
 
 ## 说明
 
